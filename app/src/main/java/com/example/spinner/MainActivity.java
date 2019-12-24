@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+
+
     }
     private void initViews() {
         mCountriesSpinner = findViewById(R.id.countriesSpinner);
@@ -29,13 +31,14 @@ public class MainActivity extends AppCompatActivity {
         mShowAddressBtn = findViewById(R.id.showAddress);
                 initSpinnerCountries();
                 initHousNumbersSpinner();
+                Button();
     }
     private void initHousNumbersSpinner() {
         Integer[] houseNumbers = new Integer[50];
-        for (int i = 1; i <= 50; i++) {
+        for (int i = 1, length = houseNumbers.length; i <= length; i++) {
             houseNumbers[i - 1] = i;
         }
-        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, houseNumbers);
+        ArrayAdapter<Integer> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, houseNumbers);
         mHouseNumberSpinner.setAdapter(adapter);
     }
     private void initSpinnerCountries() {
@@ -45,9 +48,9 @@ public class MainActivity extends AppCompatActivity {
 
         mCountriesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int NumberCountries, long KudaEtoNujno) {
                 String[] countries = getResources().getStringArray(R.array.countries);
-                initSpinnerCities(countries[i]);
+                initSpinnerCities(countries[NumberCountries]);
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -73,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     private void Button(){
+        mShowAddressBtn = findViewById(R.id.showAddress);
         mShowAddressBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
