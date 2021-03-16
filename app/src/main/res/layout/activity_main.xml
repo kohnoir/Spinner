@@ -8,21 +8,21 @@
     android:padding="50dp"
     tools:context=".MainActivity">
     <Spinner
-        android:id="@+id/countriesSpinner"
+        android:id="@+id/countries_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <Spinner
-        android:id="@+id/citiesSpinner"
+        android:id="@+id/cities_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <Spinner
-        android:id="@+id/houseNumberSpinner"
+        android:id="@+id/house_number_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/showAddress"
+        android:id="@+id/show_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ShowAdress" />
+        android:text="@string/shot_address" />
 </LinearLayout>

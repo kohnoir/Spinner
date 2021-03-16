@@ -25,15 +25,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void initViews() {
-        mCountriesSpinner = findViewById(R.id.countriesSpinner);
-        mCitiesSpinner = findViewById(R.id.citiesSpinner);
-        mHouseNumberSpinner = findViewById(R.id.houseNumberSpinner);
-        mShowAddressBtn = findViewById(R.id.showAddress);
+        mCountriesSpinner = findViewById(R.id.countries_spinner);
+        mCitiesSpinner = findViewById(R.id.cities_spinner);
+        mHouseNumberSpinner = findViewById(R.id.house_number_spinner);
+        mShowAddressBtn = findViewById(R.id.show_address);
                 initSpinnerCountries();
-                initHousNumbersSpinner();
+                initHouseNumbersSpinner();
                 Button();
     }
-    private void initHousNumbersSpinner() {
+    private void initHouseNumbersSpinner() {
         Integer[] houseNumbers = new Integer[50];
         for (int i = 1, length = houseNumbers.length; i <= length; i++) {
             houseNumbers[i - 1] = i;
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     private void Button(){
-        mShowAddressBtn = findViewById(R.id.showAddress);
+        mShowAddressBtn = findViewById(R.id.show_address);
         mShowAddressBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

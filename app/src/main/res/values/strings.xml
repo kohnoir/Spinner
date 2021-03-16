@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Spinner</string>
-    <string name="ShowAdress">Показать адрес</string>
+    <string name="shot_address">Показать адрес</string>
 </resources>
